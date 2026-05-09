@@ -411,6 +411,83 @@ p { margin: 0 0 1em; }
   color: var(--text-muted);
 }
 
+/* ===== Credentials / Business card ===== */
+.credentials-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: center;
+}
+.card-stack {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  padding: 1rem;
+}
+.card-photo {
+  margin: 0;
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-md);
+  transition: transform var(--transition), box-shadow var(--transition);
+}
+.card-photo img {
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  object-fit: cover;
+  display: block;
+}
+.card-photo figcaption {
+  padding: 0.65rem 1rem;
+  font-size: 0.82rem;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  border-top: 1px solid var(--border);
+  background: #fff;
+}
+.card-photo-front { transform: rotate(-2deg); transform-origin: bottom left; }
+.card-photo-back { transform: rotate(1.5deg); transform-origin: top right; }
+.card-photo:hover {
+  transform: rotate(0) translateY(-3px);
+  box-shadow: var(--shadow-lg);
+}
+
+.credentials-data {
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 2rem 2.25rem;
+  box-shadow: var(--shadow-sm);
+}
+.data-list { margin: 0; }
+.data-row {
+  display: grid;
+  grid-template-columns: 180px 1fr;
+  gap: 1rem;
+  padding: 0.85rem 0;
+  border-bottom: 1px solid var(--border);
+  align-items: baseline;
+}
+.data-row:last-child { border-bottom: 0; }
+.data-row dt {
+  color: var(--text-muted);
+  font-size: 0.82rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  font-weight: 600;
+  margin: 0;
+}
+.data-row dd {
+  margin: 0;
+  color: var(--text);
+  font-weight: 500;
+}
+.mono { font-family: "SFMono-Regular", Consolas, monospace; letter-spacing: 0.02em; }
+
 /* ===== Contact ===== */
 .contact-list {
   list-style: none;
@@ -535,6 +612,9 @@ a.contact-value:hover { color: #fff; }
   .nav-cta { text-align: center; margin-top: 0.5rem; }
 
   .two-col { grid-template-columns: 1fr; gap: 2.5rem; }
+  .credentials-grid { grid-template-columns: 1fr; gap: 2.5rem; }
+  .data-row { grid-template-columns: 1fr; gap: 0.25rem; }
+  .credentials-data { padding: 1.5rem 1.75rem; }
   .stats-grid { grid-template-columns: repeat(2, 1fr); gap: 1.5rem; }
   .footer-grid { grid-template-columns: 1fr; gap: 2rem; }
   .section { padding: 4rem 0; }

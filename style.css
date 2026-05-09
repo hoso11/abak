@@ -1,0 +1,134 @@
+:root {
+  --bg: #0f172a;
+  --surface: #1e293b;
+  --text: #e2e8f0;
+  --muted: #94a3b8;
+  --accent: #38bdf8;
+  --accent-hover: #0ea5e9;
+  --max-width: 960px;
+}
+
+* { box-sizing: border-box; }
+
+html, body {
+  margin: 0;
+  padding: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.6;
+}
+
+.site-header {
+  border-bottom: 1px solid var(--surface);
+}
+
+.nav {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 1.5rem;
+}
+
+.brand {
+  font-weight: 700;
+  font-size: 1.25rem;
+  color: var(--text);
+  text-decoration: none;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links a {
+  color: var(--muted);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.nav-links a:hover { color: var(--accent); }
+
+.hero {
+  text-align: center;
+  padding: 6rem 1.5rem;
+  max-width: var(--max-width);
+  margin: 0 auto;
+}
+
+.hero h1 {
+  font-size: clamp(2rem, 5vw, 3.5rem);
+  margin: 0 0 1rem;
+}
+
+.hero p {
+  color: var(--muted);
+  font-size: 1.125rem;
+  margin: 0 0 2rem;
+}
+
+.btn {
+  background: var(--accent);
+  color: #0f172a;
+  border: none;
+  padding: 0.75rem 1.75rem;
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.btn:hover { background: var(--accent-hover); }
+
+.section {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 3rem 1.5rem;
+}
+
+.section h2 {
+  font-size: 1.75rem;
+  margin: 0 0 1rem;
+  border-bottom: 2px solid var(--accent);
+  padding-bottom: 0.5rem;
+  display: inline-block;
+}
+
+.features {
+  list-style: none;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1rem;
+}
+
+.features li {
+  background: var(--surface);
+  padding: 1rem 1.25rem;
+  border-radius: 6px;
+  border-left: 3px solid var(--accent);
+}
+
+code {
+  background: var(--surface);
+  padding: 0.15rem 0.4rem;
+  border-radius: 4px;
+  font-size: 0.9em;
+}
+
+a { color: var(--accent); }
+
+.site-footer {
+  text-align: center;
+  padding: 2rem 1.5rem;
+  color: var(--muted);
+  border-top: 1px solid var(--surface);
+  margin-top: 3rem;
+}

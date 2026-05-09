@@ -1,54 +1,304 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="hy">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="A static site hosted on Azure Static Web Apps." />
-  <title>Sardar</title>
+  <meta name="description" content="ABAK ՍՊԸ — շինարարական կազմակերպություն, որը մասնագիտացած է բարձրահարկ բնակելի և հասարակական շենքերի կառուցման մեջ։ Հիմնադրվել է 1999 թվականին։" />
+  <meta name="theme-color" content="#1f3a2b" />
+  <title>ABAK ՍՊԸ — Շինարարական կազմակերպություն</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Armenian:wght@400;500;600;700;800&family=Noto+Serif+Armenian:wght@600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <header class="site-header">
-    <nav class="nav">
-      <a href="#" class="brand">Sardar</a>
-      <ul class="nav-links">
-        <li><a href="#about">About</a></li>
-        <li><a href="#features">Features</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-    </nav>
+  <header class="site-header" id="top">
+    <div class="container nav">
+      <a href="#top" class="brand" aria-label="ABAK ՍՊԸ գլխավոր էջ">
+        <span class="brand-mark" aria-hidden="true">
+          <svg viewBox="0 0 32 32" width="28" height="28" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M4 28 L16 6 L28 28" />
+            <path d="M10 28 L10 18 L22 18 L22 28" />
+            <path d="M14 28 L14 22 L18 22 L18 28" />
+          </svg>
+        </span>
+        <span class="brand-text">ABAK <span class="brand-suffix">ՍՊԸ</span></span>
+      </a>
+
+      <button class="nav-toggle" id="navToggle" aria-label="Բացել ընտրացանկը" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+
+      <nav class="nav-links" id="navLinks">
+        <a href="#about">Մեր մասին</a>
+        <a href="#services">Ծառայություններ</a>
+        <a href="#projects">Աշխատանքներ</a>
+        <a href="#contact">Կապ</a>
+        <a href="tel:+37493607778" class="nav-cta">+374 93 60-77-78</a>
+      </nav>
+    </div>
   </header>
 
   <main>
+    <!-- Hero -->
     <section class="hero">
-      <h1>Welcome to Sardar</h1>
-      <p>A fast, secure static site deployed from GitHub to Azure Static Web Apps.</p>
-      <button id="cta-btn" class="btn">Get Started</button>
+      <div class="hero-image" aria-hidden="true"></div>
+      <div class="hero-overlay" aria-hidden="true"></div>
+      <div class="container hero-content">
+        <p class="eyebrow">Շինարարական կազմակերպություն · 1999 թվականից</p>
+        <h1>Կառուցում ենք բարձրահարկ շենքեր, որոնք դիմակայում են ժամանակին։</h1>
+        <p class="hero-sub">ABAK ՍՊԸ-ն ավելի քան երկու տասնամյակ մասնագիտացած է բնակելի և հասարակական նշանակության բարձրահարկ շենքերի կառուցման մեջ՝ Երևանում և Հայաստանի այլ քաղաքներում։</p>
+        <div class="hero-actions">
+          <a href="#projects" class="btn btn-primary">Տեսնել աշխատանքները</a>
+          <a href="#contact" class="btn btn-ghost">Կապ հաստատել</a>
+        </div>
+      </div>
     </section>
 
+    <!-- Stats -->
+    <section class="stats">
+      <div class="container stats-grid">
+        <div class="stat">
+          <div class="stat-num">25+</div>
+          <div class="stat-label">Տարվա փորձ</div>
+        </div>
+        <div class="stat">
+          <div class="stat-num">1999</div>
+          <div class="stat-label">Հիմնադրման տարեթիվ</div>
+        </div>
+        <div class="stat">
+          <div class="stat-num">10+</div>
+          <div class="stat-label">Ավարտված նախագծեր</div>
+        </div>
+        <div class="stat">
+          <div class="stat-num">100%</div>
+          <div class="stat-label">Որակի երաշխիք</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About -->
     <section id="about" class="section">
-      <h2>About</h2>
-      <p>Edit <code>index.html</code>, <code>style.css</code>, and <code>script.js</code> to build your site. Push to GitHub and Azure will deploy it automatically.</p>
+      <div class="container two-col">
+        <div>
+          <p class="eyebrow eyebrow-dark">Մեր մասին</p>
+          <h2>Քսանհինգ տարի շինարարության ոլորտում</h2>
+          <p>ABAK ՍՊԸ-ն հիմնադրվել է <strong>1999 թվականին</strong> և իր գործունեության ընթացքում ապացուցել է որպես հուսալի և որակյալ շինարար։ Ընկերությունը մասնագիտացած է <strong>բարձրահարկ բնակելի և հասարակական նշանակության շենքերի</strong> կառուցման մեջ։</p>
+          <p>Տարիների ընթացքում մենք իրականացրել ենք մի շարք հաջողված շինարարական աշխատանքներ՝ կիրառելով ժամանակակից տեխնոլոգիաներ, որակյալ նյութեր և համապատասխանելով միջազգային չափանիշներին։</p>
+          <ul class="checks">
+            <li>Ճարտարապետական նախագծում և իրականացում</li>
+            <li>Ամբողջական շինարարական ցիկլ</li>
+            <li>Որակի հսկողություն բոլոր փուլերում</li>
+            <li>Ժամկետների խիստ պահպանում</li>
+          </ul>
+        </div>
+        <div class="about-card">
+          <div class="about-card-inner">
+            <div class="about-card-row">
+              <span>Հիմնադիր</span>
+              <strong>Սարդար Աղամյան</strong>
+            </div>
+            <div class="about-card-row">
+              <span>Տնօրեն</span>
+              <strong>Արմեն Ժամկոչյան</strong>
+            </div>
+            <div class="about-card-row">
+              <span>ՀՎՀՀ</span>
+              <strong>01222825</strong>
+            </div>
+            <div class="about-card-row">
+              <span>Ոլորտ</span>
+              <strong>Բարձրահարկ շինարարություն</strong>
+            </div>
+            <div class="about-card-row">
+              <span>Հիմնադրման տարեթիվ</span>
+              <strong>1999</strong>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
 
-    <section id="features" class="section">
-      <h2>Features</h2>
-      <ul class="features">
-        <li>Free hosting on Azure Static Web Apps</li>
-        <li>Automatic HTTPS / SSL</li>
-        <li>Continuous deployment from GitHub</li>
-        <li>Global CDN</li>
-      </ul>
+    <!-- Services -->
+    <section id="services" class="section section-alt">
+      <div class="container">
+        <div class="section-head">
+          <p class="eyebrow eyebrow-dark">Ծառայություններ</p>
+          <h2>Ինչով ենք զբաղվում</h2>
+          <p class="section-lede">Ամբողջական շինարարական լուծումներ՝ նախագծից մինչև բանալին հանձնում։</p>
+        </div>
+
+        <div class="services-grid">
+          <article class="service">
+            <div class="service-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21h18"/><path d="M5 21V8l7-5 7 5v13"/><path d="M9 21v-6h6v6"/><path d="M9 12h0"/><path d="M15 12h0"/></svg>
+            </div>
+            <h3>Բարձրահարկ բնակելի շենքեր</h3>
+            <p>Ժամանակակից բազմահարկ բնակելի համալիրների ամբողջական կառուցում՝ ենթակառուցվածքով հանդերձ։</p>
+          </article>
+
+          <article class="service">
+            <div class="service-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18"/><path d="M9 21V9"/></svg>
+            </div>
+            <h3>Հասարակական շենքեր</h3>
+            <p>Գրասենյակային, առևտրային և սպասարկման ոլորտի շենքերի նախագծում և կառուցում։</p>
+          </article>
+
+          <article class="service">
+            <div class="service-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v4"/><path d="M12 18v4"/><path d="M4.93 4.93l2.83 2.83"/><path d="M16.24 16.24l2.83 2.83"/><path d="M2 12h4"/><path d="M18 12h4"/><circle cx="12" cy="12" r="4"/></svg>
+            </div>
+            <h3>Ճարտարապետական նախագծում</h3>
+            <p>Անհատական նախագծերի մշակում՝ ըստ պատվիրատուի պահանջների և ժամանակակից չափանիշների։</p>
+          </article>
+
+          <article class="service">
+            <div class="service-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 7l9-4 9 4-9 4-9-4z"/><path d="M3 12l9 4 9-4"/><path d="M3 17l9 4 9-4"/></svg>
+            </div>
+            <h3>Ամբողջական ցիկլ</h3>
+            <p>Հիմքից մինչև ներքին հարդարում՝ բոլոր փուլերը մեկ պատասխանատու կողմի ղեկավարությամբ։</p>
+          </article>
+        </div>
+      </div>
     </section>
 
-    <section id="contact" class="section">
-      <h2>Contact</h2>
-      <p>Reach out: <a href="mailto:hovsep.pet@gmail.com">hovsep.pet@gmail.com</a></p>
+    <!-- Projects -->
+    <section id="projects" class="section">
+      <div class="container">
+        <div class="section-head">
+          <p class="eyebrow eyebrow-dark">Կատարված աշխատանքներ</p>
+          <h2>Մեր նախագծերը</h2>
+          <p class="section-lede">Մի քանի օրինակ՝ վերջին տարիների ընթացքում իրականացված շինարարական աշխատանքներից։</p>
+        </div>
+
+        <div class="projects-grid">
+          <article class="project">
+            <a href="assets/projects/building-day.jpg" class="project-media">
+              <img src="assets/projects/building-day.jpg" alt="Բազմաբնակարան շենք՝ ցերեկային տեսք" loading="lazy" />
+            </a>
+            <div class="project-body">
+              <h3>Բազմաբնակարան բնակելի շենք</h3>
+              <p class="project-meta">Երևան, Սիլիկյան</p>
+              <p>Ժամանակակից ճարտարապետությամբ բազմահարկ բնակելի շենք՝ բարեկարգված տարածքով։</p>
+            </div>
+          </article>
+
+          <article class="project">
+            <a href="assets/projects/building-night.jpg" class="project-media">
+              <img src="assets/projects/building-night.jpg" alt="Բարձրահարկ շենք՝ գիշերային լուսավորությամբ" loading="lazy" />
+            </a>
+            <div class="project-body">
+              <h3>Բարձրահարկ շենք՝ ճակատային լուսավորությամբ</h3>
+              <p class="project-meta">Երևան</p>
+              <p>Ճակատային ճարտարապետական լուսավորությամբ բազմահարկ շենք՝ պրեմիում որակի հարդարմամբ։</p>
+            </div>
+          </article>
+
+          <article class="project">
+            <a href="assets/projects/interior.jpg" class="project-media">
+              <img src="assets/projects/interior.jpg" alt="Ներքին հարդարման օրինակ" loading="lazy" />
+            </a>
+            <div class="project-body">
+              <h3>Ներքին հարդարման աշխատանքներ</h3>
+              <p class="project-meta">Հանձնված օբյեկտ</p>
+              <p>Ժամանակակից մինիմալիստական ոճով հարդարված ներքին տարածք՝ որակյալ նյութերի կիրառմամբ։</p>
+            </div>
+          </article>
+        </div>
+
+        <p class="projects-note">Լրացուցիչ նախագծերի և մանրամասների համար՝ խնդրում ենք <a href="#contact">կապ հաստատել մեզ հետ</a>։</p>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="section section-dark">
+      <div class="container two-col">
+        <div>
+          <p class="eyebrow">Կապ</p>
+          <h2>Կապվեք մեզ հետ</h2>
+          <p class="section-lede light">Քննարկելու Ձեր նախագիծը կամ ստանալու նախնական գնահատական՝ դիմեք մեզ ստորև նշված եղանակներից որևէ մեկով։</p>
+
+          <ul class="contact-list">
+            <li>
+              <span class="contact-label">Հասցե</span>
+              <span class="contact-value">Սիլիկյան, Սահակ Պարթև 87, Երևան</span>
+            </li>
+            <li>
+              <span class="contact-label">Հեռախոս</span>
+              <a class="contact-value" href="tel:+37493607778">+374 93 60-77-78</a>
+            </li>
+            <li>
+              <span class="contact-label">Էլ. փոստ</span>
+              <a class="contact-value" href="mailto:abak500@yandex.ru">abak500@yandex.ru</a>
+            </li>
+            <li>
+              <span class="contact-label">Աշխատանքային ժամեր</span>
+              <span class="contact-value">Երկ–Շաբ · 09:00–18:00</span>
+            </li>
+          </ul>
+        </div>
+
+        <form class="contact-form" id="contactForm" novalidate>
+          <div class="field">
+            <label for="name">Անուն</label>
+            <input id="name" name="name" type="text" required autocomplete="name" />
+          </div>
+          <div class="field">
+            <label for="phone">Հեռախոս</label>
+            <input id="phone" name="phone" type="tel" required autocomplete="tel" />
+          </div>
+          <div class="field">
+            <label for="email">Էլ. փոստ</label>
+            <input id="email" name="email" type="email" autocomplete="email" />
+          </div>
+          <div class="field">
+            <label for="message">Հաղորդագրություն</label>
+            <textarea id="message" name="message" rows="4" required></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary btn-block">Ուղարկել հարցումը</button>
+          <p class="form-note" id="formNote" role="status" aria-live="polite"></p>
+        </form>
+      </div>
     </section>
   </main>
 
   <footer class="site-footer">
-    <p>&copy; <span id="year"></span> Sardar</p>
+    <div class="container footer-grid">
+      <div>
+        <div class="brand brand-footer">
+          <span class="brand-mark" aria-hidden="true">
+            <svg viewBox="0 0 32 32" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M4 28 L16 6 L28 28" />
+              <path d="M10 28 L10 18 L22 18 L22 28" />
+            </svg>
+          </span>
+          <span class="brand-text">ABAK <span class="brand-suffix">ՍՊԸ</span></span>
+        </div>
+        <p class="footer-tagline">Բարձրահարկ շինարարություն 1999 թվականից։</p>
+      </div>
+      <div>
+        <h4>Նավիգացիա</h4>
+        <ul class="footer-links">
+          <li><a href="#about">Մեր մասին</a></li>
+          <li><a href="#services">Ծառայություններ</a></li>
+          <li><a href="#projects">Աշխատանքներ</a></li>
+          <li><a href="#contact">Կապ</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Կոնտակտներ</h4>
+        <ul class="footer-links">
+          <li>Սիլիկյան, Սահակ Պարթև 87</li>
+          <li><a href="tel:+37493607778">+374 93 60-77-78</a></li>
+          <li><a href="mailto:abak500@yandex.ru">abak500@yandex.ru</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="container footer-bottom">
+      <p>&copy; <span id="year"></span> ABAK ՍՊԸ։ Բոլոր իրավունքները պաշտպանված են։</p>
+    </div>
   </footer>
 
   <script src="script.js"></script>
